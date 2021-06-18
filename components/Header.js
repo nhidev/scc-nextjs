@@ -222,7 +222,6 @@ const Header = () => {
     { path: "/about", text: "aboutMenu" },
     { path: "/pricing", text: "pricingMenu" },
     { path: "/events", text: "eventsMenu" },
-    // { path: "/news", text: "newsMenu" },
     { path: "/contact", text: "contactMenu" },
   ];
 
