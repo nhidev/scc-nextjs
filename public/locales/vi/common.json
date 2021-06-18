@@ -1,0 +1,15 @@
+{
+  "h1": "Ví dụ đơn giản để minh họa",
+  "error-with-status": "Có lỗi trên máy chủ ({{statusCode}})",
+  "error-without-status": "Đã xảy ra lỗi trên máy chủ",
+  "title": "Trang chủ | SCC",
+  "aboutMenu": "SCC",
+  "classesMenu": "Lớp học",
+  "pricingMenu": "Bảng giá",
+  "newsMenu": "Tin tức",
+  "eventsMenu": "Sự kiện",
+  "contactMenu": "Liên hệ",
+  "firstVisitMenu": "First Visit",
+  "groupsPartiesMenu": "Groups & Parties",
+  "description": "© 2021 Saigon Climbing Center. All rights reserved"
+}
