@@ -205,7 +205,7 @@ export default css`
     display: table;
     font-weight: bold;
     text-align: center;
-    margin: 5rem auto;
+    margin: 0 auto 5rem;
   }
 
   .mr10 {
@@ -214,5 +214,7 @@ export default css`
   .mb5 {
     margin-bottom: 5rem;
   }
+  @media (min-width: 768px) {
 
+  }
 `;

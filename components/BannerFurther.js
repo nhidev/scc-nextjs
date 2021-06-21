@@ -13,9 +13,7 @@ const BannerFurtherStyled = styled.div`
   .banner-content h1 {
     color: #fff;
     font-size: 7rem;
-    line-height: 1;
     text-transform: uppercase;
-    margin-bottom: 1rem;
     span {
       display: block;
       -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */

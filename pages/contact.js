@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
-import HeroBanner from "../components/HeroBanner";
-import Map from '../components/Map';
+import HeroBanner from "@/components/HeroBanner";
+import Map from '@/components/Map';
 
 const ContactStyled = styled.main`
   .page-title {

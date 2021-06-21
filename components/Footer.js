@@ -64,19 +64,7 @@ const FooterStyled = styled.footer`
       }
     }
   }
-  .gymlink {
-    margin-bottom: 1.2rem;
-    a {
-      font-size: 2rem;
-      color: #fff;
-      text-decoration: none;
-      margin-right: 2rem;
-      cursor: pointer;
-      &.active {
-        color: #ed4815;
-      }
-    }
-  }
+  
   .social-network {
     color: #fff;
     display: flex;
@@ -161,9 +149,8 @@ const Footer = () => {
           </Row>
 
             <Row className="footer-bottom">
-              <Col xs={12} sm={6} className="gymlink">
-                <a className="active" href="#" title="ho chi minh">HO CHI MINH</a> 
-                <a href="#" title="ha noi">HA NOI</a> 
+              <Col xs={12} sm={6} className="copyright">
+              {t("description")}
               </Col>
               <Col xs={12} sm={6} className="social-network">
                 <a className="tel">0888.222.045</a>
@@ -173,7 +160,7 @@ const Footer = () => {
               </Col>
             </Row>
            
-          <div className="copyright">{t("description")}</div>
+          
       </Grid>
     </FooterStyled>
   );

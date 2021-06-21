@@ -13,7 +13,6 @@ const HeaderStyled = styled.header`
   z-index: 100;
   .site-header {
     display: flex;
-    justify-content: space-between;
   }
   .site-logo {
     display: block;
@@ -32,21 +31,14 @@ const HeaderStyled = styled.header`
   .main-menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     margin: 0;
-    background-color: #fff;
     position: absolute;
-    top: 5rem;
-    left: 0;
+    top: 6rem;
+    right: 0;
     list-style: none;
     overflow: hidden;
-    width: auto;
-    transition: all 0.3s ease-out;
-    clear: both;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
-    padding: 0 2.4rem;
+    width: 0;
     z-index: 1000;
     ul {
       margin-right: 2rem;
@@ -60,10 +52,11 @@ const HeaderStyled = styled.header`
       cursor: pointer;
       a {
         display: block;
-        padding: 2rem 0 1rem;
+        padding: 1rem 0;
         text-decoration: none;
         transition: all 0.45s;
-        text-align: left;
+        font-size: 2.4rem;
+        text-align: center;
       }
 
      
@@ -90,11 +83,14 @@ const HeaderStyled = styled.header`
     position: relative;
     user-select: none;
     position: absolute;
-    right: 0;
+    right: 1rem;
     top: 0;
     bottom: 0;
+    background: url('/images/burger-bg.svg') no-repeat center;
+    background-size: contain;
+    z-index: 10000;
     .navicon {
-      background: #333;
+      background: #fff;
       display: block;
       height: 0.2rem;
       position: relative;
@@ -104,7 +100,7 @@ const HeaderStyled = styled.header`
 
     .navicon:before,
     .navicon:after {
-      background: #333;
+      background: #fff;
       content: "";
       display: block;
       height: 100%;
@@ -122,14 +118,21 @@ const HeaderStyled = styled.header`
     }
   }
 
-
-
   /* menu btn */
-
   .menu-btn {
     display: none;
     &:checked ~ .main-menu {
-      max-height: 24rem;
+      background-color: rgb(237 237 237 / 95%);
+      transition: all .2s cubic-bezier(.25,.46,.45,.94);
+      transform: translateX(0);
+      height: calc(100vh - 6rem);
+      width: 100%;
+      ul {
+        padding: 2.4rem;
+      }
+      .language-wrap {
+        justify-content: center;
+      }
     }
     &:checked ~ .menu-icon .navicon {
       background: transparent;
@@ -185,19 +188,16 @@ const HeaderStyled = styled.header`
       height: 8rem;
     }
     .main-menu {
+      background-color: #fff;
       flex-direction: row;
-      clear: none;
-      max-height: none;
       height: 8rem;
       position: relative;
       top: 0;
-      padding: 0;
-      
+      width: auto;      
       li {
         width: auto;
         a {
           font-size: 2rem;
-          text-align: center;
         }
         &:hover {
           background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
