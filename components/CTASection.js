@@ -235,9 +235,11 @@ const CTASection = () => {
                 <p className="cta__hover-title">
                 Find out how to get climbing with us and the various options and prices that are available to you.
                 </p>
-                <span  className="btn btn--white btn--small">
-                  <span>Join</span><i></i>
-                </span>
+                <Link href="/pricing">
+                  <a className="btn btn--white">
+                    <span>Join</span><i></i>
+                  </a>
+                </Link>
               </div>
             </div>
           </Col>
@@ -257,9 +259,11 @@ const CTASection = () => {
                 <p className="cta__hover-title">
                 Get a group of your favorite adventurers of any age together for a day of conquering vertical challenges and all-around fun.
                 </p>
-                <span className="btn btn--white btn--small">
-                  <span>View more</span><i></i>
-                </span>
+                <Link href="/events">
+                  <a className="btn btn--white">
+                    <span>View more</span><i></i>
+                  </a>
+                </Link>
               </div>
             </div>
           </Col>

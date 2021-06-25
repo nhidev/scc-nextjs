@@ -1,6 +1,5 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Grid, Row, Col } from "react-styled-flexboxgrid";
 import { IntroVideoSection } from "@/components/IntroVideoSection";
 import HeroBanner from "@/components/HeroBanner";
 import ClimbingSection from "@/components/ClimbingSection";
@@ -8,6 +7,7 @@ import BlockImage from "@/components/BlockImage";
 import OpeningTimes from "@/components/OpeningTimes";
 import FacilitiesSection from "@/components/FacilitiesSection";
 import CTASection from "@/components/CTASection";
+import CountdownEvent from "@/components/CountdownEvent";
 
 
 const Homepage = () => {
@@ -23,25 +23,20 @@ const Homepage = () => {
         linkText={t("heroBanneButton01")}
         linkUrl="/about-us"
       />
+      <CountdownEvent deadline = '2021/06/28 23:55:00'/>
       <CTASection />
       <BlockImage
         title="RISE TO THE CHALLENGE"
         description="It’s a good idea to move the location of your hand-holds periodically to keep the climbing wall interesting and challenging for climbers over time."
         imgSrc="/images/route-setting.jpg"
         linkText="Join the team"
-        linkUrl="#"
+        linkUrl="/about"
       />
       <ClimbingSection/>
-      <Grid>
-        <Row>
-          <Col xs={12}>
-            <IntroVideoSection
-              source={"/images/climbing-video.mp4"}
-              bgImage={"/images/poster.jpg"}
-            />
-          </Col>
-        </Row>
-      </Grid>
+      <IntroVideoSection
+        source={"/images/climbing-video.mp4"}
+        bgImage={"/images/poster.jpg"}
+      />
       <FacilitiesSection />
       <OpeningTimes />
 
