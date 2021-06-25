@@ -172,20 +172,20 @@ const Contact = () => {
                 Mon – Friday: 09:00 – 21:00 <br/>
                 Saturday - Sunday: 09:00 – 22:00<br/>
                 Open regular hours during all holidays!</p>
-                <p className="email">scc.hcm@gmail.com</p>
+                <p className="email">saigonclimbing@gmail.com</p>
                 <p className="address">168/42 Nguyen Gia Tri Street, Ward 25, Binh Thanh District</p>
               </div>
           </Col>
           <Col xs={12} sm={12} md={4}>
             <h4>Ha Noi</h4>
             <div className="contact-summary">
-              <p className="tel">0888.222.045 – 0966.22.23.11</p>
+              <p className="tel">0888.222.045 – 0966.22.18.22</p>
               <p className="time">
                 Mon – Friday: 09:00 – 21:00 <br/>
                 Saturday - Sunday: 09:00 – 22:00<br/>
                 Open regular hours during all holidays!</p>
-              <p className="email">scc.hanoi@gmail.com</p>
-              <p className="address">44 Ly Thuong Kiet, Tran Hung Đao, Hoan Kiem District</p>
+              <p className="email">saigonclimbing@gmail.com</p>
+              <p className="address">36 Tay Ho Street, Quang An Ward, Tay Ho District</p>
               </div>
           </Col>
         </Row>

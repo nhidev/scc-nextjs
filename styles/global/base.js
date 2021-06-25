@@ -132,7 +132,7 @@ export default css`
     }
     &:hover {
       color: rgb(30 36 40);
-      box-shadow: inset 0 0 0 1px #24bb9e;
+      /* box-shadow: inset 0 0 0 1px #24bb9e; */
       background: rgb(36 187 158);
       span {
         color: rgb(255 255 255);
@@ -148,6 +148,11 @@ export default css`
         }
       }
     }
+  }
+  .btn--white {
+    &:hover {
+      background-color: rgb(255 255 255);
+    } 
   }
   .btn--black-keyline {
     box-shadow: inset 0 0 0 1px #1e2428;

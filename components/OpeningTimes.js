@@ -28,11 +28,8 @@ const OpeningTimesStyled = styled.section`
     h2 {
         margin-bottom: 2rem;
       }
-
       p {
         line-height: 2;
-        margin-bottom: 2rem;
-        max-width: 40rem;
       }
   }
   .location {
@@ -53,11 +50,10 @@ const OpeningTimes = ({ t }) => {
                 Saturday and Sunday: 09:00 – 22:00 </p>
 
                 <p>Saigon Climbing Center <br/>
-                168/42 Nguyen Gia Tri Street, Ward 25, Binh Thanh District, Ho Chi Minh City 70000</p>
-
+                HCM: 168/42 Nguyen Gia Tri Street, Ward 25, Binh Thanh District<br/>
+                HN: 36 Tay Ho Street, Quang An Ward, Tay Ho District</p>
                 <p>Email us: saigonclimbing@gmail.com</p>
-
-                <p>Call us: 0888.222.045 – 0966.22.18.22</p>
+                <p>Call us: HCM 0888.222.045 – HN 0966.22.18.22</p>
               </div>
             </div>
           </Col>

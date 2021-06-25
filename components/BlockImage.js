@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
+import Link from "next/link";
 
 const BlockImageStyled = styled.section`
   padding: 20rem 0;
@@ -71,10 +72,12 @@ const BlockImage = (props) => {
               <p>{description}</p>
               {description2 && <p>{description2}</p>}
               {linkText && (
-                <a href={linkUrl} className="btn btn--white-keyline">
-                  <span>{linkText}</span>
-                  <i></i>
-                </a>
+                <Link href={linkUrl} >
+                  <a className="btn btn--white-keyline">
+                    <span>{linkText}</span>
+                    <i></i>
+                  </a>
+                </Link>
               )}
             </div>
           </Col>

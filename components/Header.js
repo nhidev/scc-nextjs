@@ -9,7 +9,7 @@ import { Grid, Row, Col } from "react-styled-flexboxgrid";
 const HeaderStyled = styled.header`
   background-color: #fff;
   position: fixed;
-  padding: 1rem 0;
+  padding: 0;
   transition: padding 0.3s;
   width: 100%;
   z-index: 100;
@@ -56,7 +56,7 @@ const HeaderStyled = styled.header`
     align-items: center;
     margin: 0;
     position: absolute;
-    top: 7rem;
+    top: 6.5rem;
     right: 0;
     list-style: none;
     overflow: hidden;
@@ -100,10 +100,9 @@ const HeaderStyled = styled.header`
   .menu-icon {
     cursor: pointer;
     display: inline-block;
-    padding: 3.3rem 2rem 3rem;
+    padding: 3rem 2rem;
     position: relative;
     user-select: none;
-    position: absolute;
     right: 1rem;
     top: 0;
     bottom: 0;
@@ -200,7 +199,7 @@ const HeaderStyled = styled.header`
   }
 
   @media (min-width: 768px) {
-    /* height: 8rem; */
+    padding: 1rem 0;
     .site-logo {
       height: 7rem;
     }
@@ -251,7 +250,7 @@ const Header = () => {
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > 200) {
+    if (offset > 100) {
       setScrolled(true);
     } else {
       setScrolled(false);

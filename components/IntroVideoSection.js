@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Grid, Row, Col } from "react-styled-flexboxgrid";
 
 const PlayPauseStyled = styled.div`
   position: absolute;
@@ -64,7 +65,7 @@ const IntroVideoSectionStyled = styled.section`
   position: relative;
   .player {
     width: 100%;
-    max-width: 116rem;
+    max-width: 114rem;
     margin: 0 auto;
     position: relative;
     .video-container {
@@ -258,6 +259,8 @@ export class IntroVideoSection extends React.Component {
   componentWillUnmount() {
     this.video.removeEventListener("timeupdate", this.onTimeUpdate);
     this.video.removeEventListener("loadedmetadata", this.onLoadMetadata);
+    this.video.removeEventListener("seeked", this.onSeeked);
+    window.removeEventListener("resize", this.onResize);
   }
 
   onResize() {
@@ -326,48 +329,49 @@ export class IntroVideoSection extends React.Component {
   }
 
   render() {
-    const {
-      playing,
-      currentTime,
-      duration,
-      width,
-      currentPositionPercentual,
-    } = this.state;
+    const { playing, currentTime, duration, width, currentPositionPercentual } =
+      this.state;
     const { bgImage, source } = this.props;
     return (
       <IntroVideoSectionStyled>
-        <div className="player">
-          <div
-            className="video-container"
-            style={{ backgroundImage: `url(${bgImage})` }}
-          >
-            <video
-              className="video"
-              poster={bgImage}
-              ref={(video) => (this.video = video)}
-            >
-              <source src={source} type="video/mp4" />
-            </video>
-            <PlayPause
-              onClick={this.onPlayPauseClick.bind(this)}
-              playing={playing}
-            />
-          </div>
-          <p className="time-current">{currentTime}</p>
-          <p className="time-duration">{duration}</p>
-          <Seeker
-            onSeek={this.seek.bind(this)}
-            duration={duration}
-            width={width}
-            currentPositionPercentual={currentPositionPercentual}
-          />
-          <p
-            className="toggle-full-screen"
-            onClick={this.toggleFullScreen.bind(this)}
-          >
-            [ &nbsp;]
-          </p>
-        </div>
+        <Grid>
+          <Row>
+            <Col xs={12}>
+              <div className="player">
+                <div
+                  className="video-container"
+                  style={{ backgroundImage: `url(${bgImage})` }}
+                >
+                  <video
+                    className="video"
+                    poster={bgImage}
+                    ref={(video) => (this.video = video)}
+                  >
+                    <source src={source} type="video/mp4" />
+                  </video>
+                  <PlayPause
+                    onClick={this.onPlayPauseClick.bind(this)}
+                    playing={playing}
+                  />
+                </div>
+                <p className="time-current">{currentTime}</p>
+                <p className="time-duration">{duration}</p>
+                <Seeker
+                  onSeek={this.seek.bind(this)}
+                  duration={duration}
+                  width={width}
+                  currentPositionPercentual={currentPositionPercentual}
+                />
+                <p
+                  className="toggle-full-screen"
+                  onClick={this.toggleFullScreen.bind(this)}
+                >
+                  [ &nbsp;]
+                </p>
+              </div>
+            </Col>
+          </Row>
+        </Grid>
       </IntroVideoSectionStyled>
     );
   }

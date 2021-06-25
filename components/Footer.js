@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
-import GoToTop from './GoTopTop';
+import GoToTop from "./GoTopTop";
 
 const FooterStyled = styled.footer`
   background: #1e2428;
@@ -16,13 +16,13 @@ const FooterStyled = styled.footer`
   &:before {
     background: #ed4815;
     position: absolute;
-    content: '';
+    content: "";
     top: -5rem;
     left: 0;
     width: 100%;
     height: 5rem;
     clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
-  }  
+  }
   .site-footer {
     width: 100%;
     color: #fff;
@@ -39,7 +39,6 @@ const FooterStyled = styled.footer`
     align-items: center;
     width: 100%;
     padding: 2rem 0 1rem;
-
   }
   .footer-menu {
     list-style: none;
@@ -64,16 +63,26 @@ const FooterStyled = styled.footer`
       }
     }
   }
-  
+
   .social-network {
-    color: #fff;
+    color: rgb(255 255 255 / 40%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 1.2rem;
-    a:first-child {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-right: 2.4rem;
+    div {
+      display: inline-flex;
+    }
+    .tel {
+      a {
+        margin-right: 2rem;
+        height: 4rem;
+        line-height: 4rem;
+      }
+      span {
+        color: #ed4815;
+        font-weight: bold;
+      }
     }
   }
   .icon {
@@ -90,15 +99,15 @@ const FooterStyled = styled.footer`
       background-size: 2.2rem;
     }
     &.icon-facebook {
-      background-image: url('/images/icon-facebook.svg');
+      background-image: url("/images/icon-facebook.svg");
     }
 
     &.icon-instagram {
-      background-image: url('/images/icon-instagram.svg');
+      background-image: url("/images/icon-instagram.svg");
     }
 
     &.icon-youtube {
-      background-image: url('/images/icon-youtube.svg');
+      background-image: url("/images/icon-youtube.svg");
     }
   }
   .copyright {
@@ -111,10 +120,9 @@ const FooterStyled = styled.footer`
     }
     .social-network {
       justify-content: flex-end;
+      flex-direction: row;
     }
   }
-
-
 `;
 
 const Footer = () => {
@@ -131,8 +139,9 @@ const Footer = () => {
     <FooterStyled>
       <Grid>
         <Row className="site-footer">
-          <Col xs={12}><GoToTop  time={"100"}/></Col>
-          {/* <Col xs={12}><img  className="site-logo" src="logo_scc_black_bg.png" /></Col> */}
+          <Col xs={12}>
+            <GoToTop time={"100"} />
+          </Col>
           <Col xs={12}>
             <ul className="footer-menu">
               {buttons.map((button) => (
@@ -146,21 +155,28 @@ const Footer = () => {
               ))}
             </ul>
           </Col>
-          </Row>
+        </Row>
 
-            <Row className="footer-bottom">
-              <Col xs={12} sm={6} className="copyright">
-              {t("description")}
-              </Col>
-              <Col xs={12} sm={6} className="social-network">
-                <a className="tel">0888.222.045</a>
-                <a className="icon icon-facebook" href="#0"></a>
-                <a className="icon icon-youtube" href="#0"></a>
-                <a className="icon icon-instagram" href="#0"></a>
-              </Col>
-            </Row>
-           
-          
+        <Row className="footer-bottom">
+          <Col xs={12} sm={6} className="copyright">
+            {t("description")}
+          </Col>
+          <Col xs={12} sm={6} className="social-network">
+            <div className="tel">
+              <a>
+                <span>HCM:</span> 0888.222.045
+              </a>
+              <a>
+                <span>HN:</span> 0888.222.045
+              </a>
+            </div>
+            <div>
+              <a className="icon icon-facebook" href="#0"></a>
+              <a className="icon icon-youtube" href="#0"></a>
+              <a className="icon icon-instagram" href="#0"></a>
+            </div>
+          </Col>
+        </Row>
       </Grid>
     </FooterStyled>
   );
