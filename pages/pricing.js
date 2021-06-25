@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
-import HeroBanner from "../components/HeroBanner";
-import BlockImage from "../components/BlockImage";
+import HeroBanner from "@/components/HeroBanner";
+import BlockImage from "@/components/BlockImage";
 
 const Pricing = () => {
   const router = useRouter();
@@ -43,6 +43,7 @@ const Pricing = () => {
       }
       .note {
         margin: 1rem auto;
+        font-style: italic;
         span {
           color: #ed4815;
           vertical-align: text-top;
@@ -79,7 +80,7 @@ const Pricing = () => {
           <Row>
             <Col xs={12}>
               <Row center="xs">
-                <Col xs={8}>
+                <Col md={8} xs={12}>
                   <h3>DAY PASSES</h3>
                   <div className="responsive-table">
                     <table>
@@ -110,7 +111,7 @@ const Pricing = () => {
           <Row>
             <Col xs={12}>
               <Row center="xs">
-                <Col xs={8}>
+                <Col  md={8} xs={12}>
                   <h3>PUNCH PASS</h3>
                   <p>Punch-Passes are great if you are coming occasionally, and want to save some money on Day-passes. Punch-Passes do not expire and can be shared, but certain restrictions do apply, talk to our Front Desk staff for details.</p>
                   <div className="responsive-table">
@@ -138,7 +139,7 @@ const Pricing = () => {
           <Row>
             <Col xs={12}>
               <Row center="xs">
-                <Col xs={8}>
+                <Col md={8} xs={12}>
                   <h3>PRE-PAID</h3>
                   <p>This is great for short-term visitors, or if you just want to try out membership, but you're not ready to commit.</p>
                   <div className="responsive-table">
@@ -162,7 +163,7 @@ const Pricing = () => {
           <Row>
             <Col xs={12}>
               <Row center="xs">
-                <Col xs={8}>
+                <Col md={8} xs={12}>
                   <h3>ANNUAL MEMBERSHIP</h3>
                   <p>This is our best membership style, if you are coming consistently for two months or more. Membership inludes benefits, such as discounts in our shop, one guest-pass per member, and awesome climbing. Memberships can be frozen or terminated any time from this website.</p>
                   <div className="responsive-table">
@@ -186,7 +187,7 @@ const Pricing = () => {
           <Row className="mb5">
             <Col xs={12}>
               <Row center="xs">
-                <Col xs={8}>
+                <Col md={8} xs={12}>
                   <h3>EQUIPMENT HIRE</h3>
                   <p>We have the equipment you need available for rental. We do require climbing shoes for climbing on our walls.</p>
                   <div className="responsive-table">

@@ -1,13 +1,13 @@
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
-import { IntroVideoSection } from "../components/IntroVideoSection";
-import HeroBanner from "../components/HeroBanner";
-import ClimbingSection from "../components/ClimbingSection";
-import BlockImage from "../components/BlockImage";
-import OpeningTimes from "../components/OpeningTimes";
-import FacilitiesSection from "../components/FacilitiesSection";
-import CTASection from "../components/CTASection";
+import { IntroVideoSection } from "@/components/IntroVideoSection";
+import HeroBanner from "@/components/HeroBanner";
+import ClimbingSection from "@/components/ClimbingSection";
+import BlockImage from "@/components/BlockImage";
+import OpeningTimes from "@/components/OpeningTimes";
+import FacilitiesSection from "@/components/FacilitiesSection";
+import CTASection from "@/components/CTASection";
 
 
 const Homepage = () => {

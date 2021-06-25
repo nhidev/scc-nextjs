@@ -9,49 +9,43 @@ const HeroBannerStyled = styled.div`
   background-size: auto,cover;
   background-repeat: repeat,no-repeat;
   background-color: #1e2428;
-
-  min-height: 38.75rem;
   max-height: 80vh;
   position: relative;
   width: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
   clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0 100%);
   margin-top: -10rem;
   margin-bottom: 10rem;
+  min-height: 60rem;
 
-  @media (min-width: 768px) {
-    align-items: center;
-    padding-top: 9rem;
-    min-height: 45rem;
-    padding-bottom: 20rem;
-  }
-
-
-  .hero-banner_txt > * {
-    transform: translateY(80px);
-    opacity: 0;
-    animation: fadeUp 1s ease-out forwards;
-  }
-  .hero-banner_txt h1 {
-    color: #fff;
-    font-size: 7rem;
-    line-height: 1;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    span {
-      display: block;
-      -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: #ffffff;
+  .hero-banner_txt {
+    > * {
+      transform: translateY(80px);
+      opacity: 0;
+      animation: fadeUp 1s ease-out forwards;
     }
+    h1 {
+      margin-top: 9rem;
+      color: #fff;
+      font-size: 4rem;
+      text-transform: uppercase;
+      span {
+        display: block;
+        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #ffffff;
+      }
+    }
+    p {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+    
   }
-  .hero-banner_txt p {
-    color: #fff;
-    font-size: 2rem;
-    margin-bottom: 3rem;
-  }
+ 
   .btn--green {
     box-sizing: border-box;
     position: relative;
@@ -106,36 +100,38 @@ const HeroBannerStyled = styled.div`
         border-left-color: rgb(255 255 255);
       }
     }
-  }
-  .btn--green:hover {
-    background: #fff;
-    box-shadow: inset 0 0 0 1px #fff;
-    span {
-      color: #1e2428;
-      transform: translateX(1rem);
-    }
-    i {
-      background: #1e2428;
-      &:before {
-        background: #1e2428;
+    &:hover {
+      background: #fff;
+      box-shadow: inset 0 0 0 1px #fff;
+      span {
+        color: #1e2428;
+        transform: translateX(1rem);
       }
-      &:after {
-        border-left-color: #1e2428;
+      i {
+        background: #1e2428;
+        &:before {
+          background: #1e2428;
+        }
+        &:after {
+          border-left-color: #1e2428;
+        }
       }
     }
   }
 
-  .hero-banner_txt h1 span:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  .hero-banner_txt h1 span:nth-child(3) {
-    animation-delay: 0.5s;
-  }
-  .hero-banner_txt p {
-    animation-delay: 0.8s;
-  }
-  .hero-banner_txt .btn--green {
-    animation-delay: 1s;
+  .hero-banner_txt {
+    h1 span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    h1 span:nth-child(3) {
+     animation-delay: 0.5s;
+    }
+    p {
+      animation-delay: 0.8s;
+    }
+    .btn--green {
+      animation-delay: 1s;
+    }
   }
 
   @keyframes fadeUp {
@@ -146,6 +142,16 @@ const HeroBannerStyled = styled.div`
     100% {
       transform: translateY(0px);
       opacity: 1;
+    }
+  }
+
+  @media (min-width: 768px) {
+    align-items: flex-end;
+    padding-bottom: 20rem;
+    .hero-banner_txt {
+      h1 {
+        font-size: 7rem;
+      }
     }
   }
 `;

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
-import HeroBanner from "../components/HeroBanner";
+import HeroBanner from "@/components/HeroBanner";
 
 const CourseStyled = styled.main`
 

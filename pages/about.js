@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
-import HeroBanner from "../components/HeroBanner";
-import BlockImage from "../components/BlockImage";
-import OpeningTimes from "../components/OpeningTimes";
+import HeroBanner from "@/components/HeroBanner";
+import BlockImage from "@/components/BlockImage";
+import OpeningTimes from "@/components/OpeningTimes";
 
 const AboutStyled = styled.main`
   img {
