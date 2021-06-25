@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -8,9 +9,29 @@ import { Grid, Row, Col } from "react-styled-flexboxgrid";
 const HeaderStyled = styled.header`
   background-color: #fff;
   position: fixed;
-  height: 6rem;
+  padding: 1rem 0;
+  transition: padding 0.3s;
   width: 100%;
   z-index: 100;
+  &:after {
+    bottom: 0;
+    box-shadow: 0 0 40px 0 rgb(30 36 40 / 10%);
+    content: "";
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+  }
+  &.scrolled {
+    padding: 0;
+    &:after {
+      opacity: 1;
+    }
+  }
+
   .site-header {
     display: flex;
   }
@@ -27,6 +48,7 @@ const HeaderStyled = styled.header`
   }
   .menu-area {
     margin-left: auto;
+    display: flex;
   }
   .main-menu {
     display: flex;
@@ -34,7 +56,7 @@ const HeaderStyled = styled.header`
     align-items: center;
     margin: 0;
     position: absolute;
-    top: 6rem;
+    top: 7rem;
     right: 0;
     list-style: none;
     overflow: hidden;
@@ -59,7 +81,6 @@ const HeaderStyled = styled.header`
         text-align: center;
       }
 
-     
       &:hover a {
         color: rgb(237 72 21);
       }
@@ -79,14 +100,14 @@ const HeaderStyled = styled.header`
   .menu-icon {
     cursor: pointer;
     display: inline-block;
-    padding: 2.8rem 2rem;
+    padding: 3.3rem 2rem 3rem;
     position: relative;
     user-select: none;
     position: absolute;
     right: 1rem;
     top: 0;
     bottom: 0;
-    background: url('/images/burger-bg.svg') no-repeat center;
+    background: url("/images/burger-bg.svg") no-repeat center;
     background-size: contain;
     z-index: 10000;
     .navicon {
@@ -123,7 +144,7 @@ const HeaderStyled = styled.header`
     display: none;
     &:checked ~ .main-menu {
       background-color: rgb(237 237 237 / 95%);
-      transition: all .2s cubic-bezier(.25,.46,.45,.94);
+      transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       transform: translateX(0);
       height: calc(100vh - 6rem);
       width: 100%;
@@ -152,9 +173,6 @@ const HeaderStyled = styled.header`
     }
   }
 
-  
-
-
   .language-wrap {
     display: flex;
     width: 100%;
@@ -170,10 +188,10 @@ const HeaderStyled = styled.header`
       width: 3rem;
       height: 3rem;
       &:first-child {
-        background-image: url('/images/vn.png');
+        background-image: url("/images/vn.png");
       }
       &:last-child {
-        background-image: url('/images/en.png');
+        background-image: url("/images/en.png");
       }
       &.active {
         display: none;
@@ -181,19 +199,16 @@ const HeaderStyled = styled.header`
     }
   }
 
-
   @media (min-width: 768px) {
-    height: 8rem;
+    /* height: 8rem; */
     .site-logo {
-      height: 8rem;
+      height: 7rem;
     }
     .main-menu {
-      background-color: #fff;
       flex-direction: row;
-      height: 8rem;
       position: relative;
       top: 0;
-      width: auto;      
+      width: auto;
       li {
         width: auto;
         a {
@@ -210,7 +225,7 @@ const HeaderStyled = styled.header`
     }
     .language-wrap {
       width: auto;
-      }
+    }
   }
 `;
 
@@ -232,8 +247,27 @@ const Header = () => {
     router.push(router.pathname, router.asPath, { locale });
   };
 
+  const [scrolled, setScrolled] = React.useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 200) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
+  let x = ["navbar"];
+  if (scrolled) {
+    x.push("scrolled");
+  }
+
   return (
-    <HeaderStyled>
+    <HeaderStyled className={x.join(" ")}>
       <Grid>
         <Row>
           <Col className="site-header" xs={12}>
@@ -267,13 +301,13 @@ const Header = () => {
                     onClick={changeLanguage}
                     defaultValue={locale}
                     value="vi"
-                    className={locale == 'vi' ? 'active': ''}
+                    className={locale == "vi" ? "active" : ""}
                   />
                   <button
                     onClick={changeLanguage}
                     defaultValue={locale}
                     value="en"
-                    className={locale == 'en' ? 'active': ''}
+                    className={locale == "en" ? "active" : ""}
                   />
                 </div>
               </nav>
@@ -284,6 +318,5 @@ const Header = () => {
     </HeaderStyled>
   );
 };
-
 
 export default Header;
