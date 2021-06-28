@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
@@ -59,7 +58,7 @@ const About = () => {
         </Row>
         <Row className="mb5">
           <Col xs={12} sm={6}>
-            <Image src="/images/team.jpg" width="690" height="500"  alt="team"/>
+            <img src="/images/team.jpg" alt="team"/>
           </Col>
           <Col xs={12} sm={6} className="text-box">
             <h2>Meet Our Team...</h2>

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
-import Image from "next/image";
 
 const PostCardStyled = styled(Col)`
  img {
@@ -44,7 +43,7 @@ const PostCard = ({ title, image, publishedAt, onClick }) => {
        <div className="post-content">
           <div className="post-content__img">
             <a href="https://parthianclimbing.com/harrogate/2020/05/29/the-power-of-knowledge-know-your-holds/">
-              <Image src="https://parthianclimbing.com/harrogate/wp-content/uploads/sites/19/2020/05/39149561090_30a6c76485_o-e1590747648862.jpg" />
+              <img src="https://parthianclimbing.com/harrogate/wp-content/uploads/sites/19/2020/05/39149561090_30a6c76485_o-e1590747648862.jpg" />
             </a>
           </div>
           <div className="text-wrapper">

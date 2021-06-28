@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Image from 'next/image';
 
 const GoToTopStyled = styled.div`
   transition: transform .4s;
@@ -52,7 +51,7 @@ class GoToTop extends React.Component{
     return(
       <GoToTopStyled>
         <button className="go-top" onClick={this.start}>
-          <Image src="/images/go-top-icon.svg" width="50" height="50" alt="go to top" />
+          <img src="/images/go-top-icon.svg" alt="go to top" />
         </button>
       </GoToTopStyled>  
       

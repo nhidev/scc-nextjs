@@ -1,7 +1,5 @@
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
-import Image from 'next/image';
-
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
 
@@ -169,7 +167,7 @@ const BannerFurther = (props) => {
         </Col>
         <Col xs={12} sm={6}>
           <picture className="banner-hero">
-            <Image src={imgSrc} alt="banner hero" />
+            <img src={imgSrc} alt="banner hero" />
           </picture>
         </Col>
         </Row>

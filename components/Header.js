@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Image from "next/image";
 import styled from "styled-components";
 
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
@@ -275,10 +274,8 @@ const Header = () => {
           <Col className="site-header" xs={12}>
             <Link href="/">
               <a className="site-logo">
-                <Image
+                <img
                   src="/images/logo_scc_white_bg.png"
-                  width="280"
-                  height="70"
                   alt="saigon climbibg center"
                 />
               </a>

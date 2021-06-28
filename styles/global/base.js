@@ -15,6 +15,7 @@ export default css`
     font-size: 1.6rem;
     line-height: 1.5;
     color: #222222;
+    display: inline-table;
     overflow-x: hidden;
     min-height: 100vh;
     width: 100%;
@@ -70,7 +71,10 @@ export default css`
   }
 
   main {
+    display: table;
     padding: 6rem 0 40rem;
+    width: 100%;
+    clear: both;
   }
   @media (min-width: 768px) {
     main {

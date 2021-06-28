@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
 import Link from "next/link";
-import Image from 'next/image';
 
 const BlockImageStyled = styled.section`
   padding: 20rem 0;
@@ -84,8 +83,7 @@ const BlockImage = (props) => {
           </Col>
           <Col xs={12} sm={6}>
             <div className="block-image">
-              <Image src={imgSrc}  alt="block image" width="1035"
-                height="600"/>
+              <img src={imgSrc}  alt="block image"/>
             </div>
           </Col>
         </Row>

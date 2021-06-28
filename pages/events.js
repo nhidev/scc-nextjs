@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -104,7 +103,7 @@ const Events = () => {
               <div className="post-content">
                 <div className="post-content__img">
                   <a href="#">
-                    <Image src="/images/blacklight-party.jpg" width="580" height="300" alt="black light party"/>
+                    <img src="/images/blacklight-party.jpg" alt="black light party"/>
                   </a>
                 </div>
 
@@ -138,7 +137,7 @@ const Events = () => {
               <div className="post-content">
                 <div className="post-content__img">
                   <a href="#">
-                    <Image src="/images/tuesday-climb.jpg" width="580" height="300" alt="event"/>
+                    <img src="/images/tuesday-climb.jpg" alt="event"/>
                   </a>
                 </div>
 
@@ -183,7 +182,7 @@ const Events = () => {
               <div className="post-content">
                 <div className="post-content__img">
                   <a href="#">
-                    <Image src="/images/ladies-night.jpg" width="580" height="300" />
+                    <img src="/images/ladies-night.jpg" />
                   </a>
                 </div>
 
@@ -220,7 +219,7 @@ const Events = () => {
               <div className="post-content">
                 <div className="post-content__img">
                   <a href="#">
-                    <Image src="/images/rise-climb.jpg" width="580" height="300" />
+                    <img src="/images/rise-climb.jpg" />
                   </a>
                 </div>
 
