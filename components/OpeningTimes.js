@@ -8,7 +8,7 @@ const OpeningTimesStyled = styled.section`
   margin-top: -10rem;
   margin-bottom: -10rem;
   overflow: hidden;
-  .opening-times {
+  .block-text {
     display: flex;
     justify-content: center;
     position: relative;
@@ -16,33 +16,51 @@ const OpeningTimesStyled = styled.section`
     .bg-overlay {
       color: #fff;
       background-color: #1e2428;
-      position: absolute;
-      padding: 6rem;
-      width: 60rem;
-      height: 40rem;
-      left: 0;
-      top: 0;
-      bottom: 0;
+      padding: 3.2rem;
       margin: auto;
     }
     h2 {
-        margin-bottom: 2rem;
-      }
-      p {
-        line-height: 2;
-      }
+      margin-bottom: 4rem;
+    }
+    p {
+      line-height: 2;
+      margin-bottom: 2rem;
+      max-width: 90%;
+    }
   }
-  .location {
-
+  @media (min-width: 768px) {
+    .block-text {
+      .bg-overlay {
+        position: absolute;
+        padding: 3rem 6rem;
+        width: 60rem;
+        height: 40rem;
+        left: 1rem;
+        top: 0;
+        bottom: 0;
+      
+      }
+    }
+    .block-image {
+      height: calc(100% + 7.5rem);
+      margin-left: -50%;
+      margin-top: -3.75rem;
+      margin-bottom: -3.75rem;
+      width: 150%;
+      z-index: -1;
+      img {
+        height: 60rem;
+      }
+    }
   }
-`;
+  `;
 
 const OpeningTimes = ({ t }) => {  
   return (
     <OpeningTimesStyled>
       <Grid>
         <Row>
-          <Col className="opening-times" xs={12} sm={5}>
+          <Col className="block-text" xs={12} sm={5}>
             <div className="bg-overlay">
               <h2>OPENING <br/>TIMES</h2>
               <div>

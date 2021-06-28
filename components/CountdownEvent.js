@@ -14,6 +14,7 @@ const CountdownEventStyled = styled.section`
   justify-content: center;
   align-items: center;
   margin: auto;
+  padding: 1.6rem;
  h4 {
    margin-bottom: 1.5rem;
  }
@@ -35,7 +36,7 @@ const CountdownEventStyled = styled.section`
 
 .countdown__item {
   display: inline-block;
-  width: 9rem;
+  width: 8rem;
   text-align: center;
   user-select: none;
 }

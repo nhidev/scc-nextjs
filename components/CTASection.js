@@ -177,7 +177,8 @@ const CTASectionStyled = styled.section`
   }
 `;
 
-const CTASection = () => {
+const CTASection = (props) => {
+  const { ctaSectionTitle, ctaSectionDes} = props;
   return (
     <CTASectionStyled>
       <Grid>
@@ -185,11 +186,8 @@ const CTASection = () => {
         <Col xs={12} className="scc_wrapper">
           <Row center="xs">
             <Col xs={10}>
-              <h1>Anyone can climb</h1>
-              <p>Located in Binh Thanh District this centre is +8000 square ft of huge climbing space. Our purpose built, climbing centre caters for all ages and abilities. Experienced climbers can refine their skills on the lead walls and improve strength and core training on the Moonboard. New climbers of all ages can learn in a safe and fun environment. The centre also includes full amenties, a café, shower facilities and classes.</p> 
-
-              {/* <h1>We’re a community of climbers –<br/> at every experience level.</h1>
-              <p>From novice to expert and everything in between, there’s a spot for you at SCC. See how you can fit into our community!</p>  */}
+              <h1>{ctaSectionTitle}</h1>
+              <p>{ctaSectionDes}</p> 
             </Col>
            </Row>
           </Col>

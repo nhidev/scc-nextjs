@@ -61,11 +61,10 @@ const SeekerStyled = styled.div`
 `;
 
 const IntroVideoSectionStyled = styled.section`
-  padding: 5rem;
   position: relative;
   .player {
     width: 100%;
-    max-width: 114rem;
+    max-width: 102rem;
     margin: 0 auto;
     position: relative;
     .video-container {

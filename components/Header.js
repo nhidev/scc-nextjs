@@ -58,7 +58,7 @@ const HeaderStyled = styled.header`
     align-items: center;
     margin: 0;
     position: absolute;
-    top: 6.5rem;
+    top: 6rem;
     right: 0;
     list-style: none;
     overflow: hidden;
