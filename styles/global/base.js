@@ -15,7 +15,7 @@ export default css`
     font-size: 1.6rem;
     line-height: 1.5;
     color: #222222;
-    display: inline-table;
+    /* display: inline-table; */
     overflow-x: hidden;
     min-height: 100vh;
     width: 100%;
@@ -71,7 +71,7 @@ export default css`
   }
 
   main {
-    display: table;
+    display: grid;
     padding: 6rem 0 40rem;
     width: 100%;
     clear: both;
@@ -152,7 +152,36 @@ export default css`
         }
       }
     }
+    @media (min-width: 768px) {
+      padding: 2rem 3rem;
+    }
   }
+  .btn--green {
+    background-color: #24bb9e;
+    i {
+      &:before {
+        background: #fff;
+      }
+    }
+    &:hover {
+      background: #fff;
+      box-shadow: inset 0 0 0 1px #fff;
+      span {
+        color: #1e2428;
+      }
+      i {
+        background: #1e2428;
+        &:before {
+          background: #1e2428;
+        }
+        &:after {
+          border-left-color: #1e2428;
+        }
+      }
+    }
+  }
+
+
   .btn--white {
     &:hover {
       background-color: rgb(255 255 255);

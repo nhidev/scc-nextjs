@@ -3,7 +3,7 @@ import { Grid, Row, Col } from "react-styled-flexboxgrid";
 import Link from "next/link";
 
 const BlockImageStyled = styled.section`
-  padding: 20rem 0;
+  padding: 10rem 0;
   /* clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0 100%); */
   overflow: hidden;
   .block-text {
@@ -30,7 +30,7 @@ const BlockImageStyled = styled.section`
   .block-image {
     img {
       width: 100%;
-      max-height: 60rem;
+      height: 37rem;
       object-fit: cover;
     }
   }
@@ -39,10 +39,10 @@ const BlockImageStyled = styled.section`
     .block-text {
       .bg-overlay {
         position: absolute;
-        padding: 6rem;
+        padding: 3rem 6rem;
         width: 60rem;
         height: 40rem;
-        left: 0;
+        left: 1rem;
         top: 0;
         bottom: 0;
       
@@ -55,6 +55,9 @@ const BlockImageStyled = styled.section`
       margin-bottom: -3.75rem;
       width: 150%;
       z-index: -1;
+      img {
+        height: 60rem;
+      }
     }
   }
 

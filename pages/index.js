@@ -24,7 +24,7 @@ const Homepage = () => {
         linkUrl="/about-us"
       />
       <CountdownEvent deadline = '2021/06/28 23:55:00'/>
-      <CTASection />
+      <CTASection ctaSectionTitle={t("ctaSectionTitle")} ctaSectionDes ={t("ctaSectionDescription")} />
       <BlockImage
         title="RISE TO THE CHALLENGE"
         description="It’s a good idea to move the location of your hand-holds periodically to keep the climbing wall interesting and challenging for climbers over time."
