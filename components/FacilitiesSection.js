@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
-import Image from 'next/image';
 
 const FacilitiesSectionStyled = styled.section`
   position: relative;
@@ -10,6 +9,7 @@ const FacilitiesSectionStyled = styled.section`
     content: "";
     position: absolute;
     width: 100vw;
+    min-width: 100%;
     left: 0;
     top: -30rem;
     height: calc(100% + 30rem);
@@ -106,7 +106,7 @@ const FacilitiesSection = () => {
           </Col>
         </Row>
       </Grid>
-      {/* <Image
+      {/* <img
         className="fac__strip"
         src="/fac-bottom-strip.svg"
         alt="fac strip"

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -68,7 +67,7 @@ const GroupsParties = () => {
               during the day, but only members are granted unlimited overnight
               access.
             </p>
-            <Image src="/images/first-visit.jpg" width="1440" height="500" alt="group party" />
+            <img src="/images/first-visit.jpg" alt="group party" />
             <h3>WHAT TO WEAR</h3>
             <p>
               Wear comfortable clothes you can move around in. Climbing shoes

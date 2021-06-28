@@ -11,8 +11,11 @@ const FooterStyled = styled.footer`
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  min-width: 100vw;
   /* clip-path: polygon(0 80px, 100% 0, 100% 100%, 0 100%); */
   padding-top: 5rem;
+  display: table;
   &:before {
     background: #ed4815;
     position: absolute;
@@ -22,11 +25,6 @@ const FooterStyled = styled.footer`
     width: 100%;
     height: 5rem;
     clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
-  }
-  .site-footer {
-    width: 100%;
-    color: #fff;
-    position: relative;
   }
   .site-logo {
     width: 30rem;
@@ -138,7 +136,7 @@ const Footer = () => {
   return (
     <FooterStyled>
       <Grid>
-        <Row className="site-footer">
+        <Row>
           <Col xs={12}>
             <GoToTop time={"100"} />
           </Col>
