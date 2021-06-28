@@ -35,7 +35,7 @@ class MyDocument extends Document {
     return (
       <Html lang={this.props.lang}>
         <Head>
-          <meta name="description" content="Build a responsive PWA using Next.js and styled-components."></meta>
+          <meta name="description" content="Saigon Climbing Center"></meta>
           <meta name="theme-color" content="#FFFFFF"/>
           
           <link rel="icon" href="/favicon.ico" />
