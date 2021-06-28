@@ -4,7 +4,7 @@ import Map from './Map';
 
 const OpeningTimesStyled = styled.section`
   padding: 20rem 0;
-  clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0 100%);
+  /* clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0 100%); */
   margin-top: -10rem;
   margin-bottom: -10rem;
   overflow: hidden;

@@ -127,7 +127,7 @@ const BannerFurtherStyled = styled.div`
     background-size: cover;
     display: block;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 10% 23%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 10% 23%); */
     z-index: -1;
     img {
       opacity: 1;

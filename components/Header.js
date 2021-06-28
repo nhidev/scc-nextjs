@@ -40,6 +40,8 @@ const HeaderStyled = styled.header`
     display: block;
     height: 5rem;
     margin-right: auto;
+    position: relative;
+    overflow: hidden;
     img {
       object-fit: contain;
       height: 100%;
