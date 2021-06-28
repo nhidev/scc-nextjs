@@ -43,10 +43,6 @@ class MyDocument extends Document {
           <link href='/favicon-16x16.png' rel='icon' type='image/png' sizes='16x16' />
           <link href='/favicon-32x32.png' rel='icon' type='image/png' sizes='32x32' />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
-          <link
-          href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css"
-          rel="stylesheet"
-        />
         </Head>
         <body>
           <Main />
