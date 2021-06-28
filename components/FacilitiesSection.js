@@ -13,7 +13,7 @@ const FacilitiesSectionStyled = styled.section`
     left: 0;
     top: -30rem;
     height: calc(100% + 30rem);
-    clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0 100%);
+    /* clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0 100%); */
     z-index: -1;
   }
   

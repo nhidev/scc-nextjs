@@ -14,7 +14,7 @@ const ContactStyled = styled.main`
     }
   }
   .map {
-    clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0 100%);
+    /* clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0 100%); */
   }
 
   .contact-info {

@@ -202,7 +202,7 @@ export default css`
   }  
 
   .btn-orange {
-    clip-path: polygon(0 10%, 95% 0, 100% 100%, 5% 95%);
+    /* clip-path: polygon(0 10%, 95% 0, 100% 100%, 5% 95%); */
     padding: 3rem 5rem;
     background-color: rgb(237 72 21);
     color: rgb(255 255 255);
