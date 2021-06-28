@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import Image from 'next/image';
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
 
 const CTASectionStyled = styled.section`
@@ -14,10 +15,9 @@ const CTASectionStyled = styled.section`
    }
   }
   .cta {
-    display: block;
+    display: flex;
     position: relative;
     width: 100%;
-    padding-bottom: 100%;
     overflow: hidden;
   }
   .cta:hover .cta__hover {
@@ -197,9 +197,11 @@ const CTASection = () => {
         <Row>
           <Col className="cta__box" xs={12} sm={4}>
             <div className="cta cover-bg bg--black colour--white">
-              <img
+              <Image
                 className="cover-bg__img"
                 src="/images/new-to-climbing.jpg"
+                width="460"
+                height="460"
                 alt="new to climbing"
               />
               <div className="cta__inner">
@@ -221,9 +223,11 @@ const CTASection = () => {
           </Col>
           <Col className="cta__box" xs={12} sm={4}>
             <div className="cta cover-bg bg--black colour--white">
-              <img
+              <Image
                 className="cover-bg__img"
                 src="/images/members-prices.jpg"
+                width="460"
+                height="460"
                 alt="member"
               />
               <div className="cta__inner">
@@ -245,9 +249,11 @@ const CTASection = () => {
           </Col>
           <Col className="cta__box" xs={12} sm={4}>
             <div className="cta cover-bg bg--black colour--white">
-              <img
+              <Image
                 className="cover-bg__img"
                 src="/images/parties-group.jpg"
+                width="460"
+                height="460"
                 alt="/images/parties group"
               />
               <div className="cta__inner">

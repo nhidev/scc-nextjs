@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-styled-flexboxgrid";
+import Image from 'next/image';
 
 const ClimbingSectionStyled = styled.section`
   /* padding: 5rem; */
@@ -13,10 +14,9 @@ const ClimbingSectionStyled = styled.section`
    }
   }
   .cta {
-    display: block;
+    display: flex;
     position: relative;
     width: 100%;
-    padding-bottom: 100%;
     overflow: hidden;
   }
   .cta:hover .cta__hover {
@@ -125,10 +125,11 @@ const ClimbingSection = ({ t }) => {
         <Row>
           <Col className="cta__box" xs={12} sm={6} md={3}>
             <a href="" className="cta cover-bg bg--black colour--white">
-              <img
+              <Image
                 className="cover-bg__img"
-                src="/images/lead-climbing.jpg"
                 src="/images/boudering.jpg"
+                width="335"
+                height="335"
                 alt="boudering"
               />
               <div className="cta__inner">
@@ -145,9 +146,11 @@ const ClimbingSection = ({ t }) => {
           </Col>
           <Col className="cta__box" xs={12} sm={6} md={3}>
             <a href="" className="cta cover-bg bg--black colour--white">
-              <img
+              <Image
                 className="cover-bg__img"
                 src="/images/toprope.jpg"
+                width="335"
+                height="335"
                 alt="toprope"
               />
               <div className="cta__inner">
@@ -164,9 +167,11 @@ const ClimbingSection = ({ t }) => {
           </Col>
           <Col className="cta__box" xs={12} sm={6} md={3}>
             <a href="" className="cta cover-bg bg--black colour--white">
-              <img
+              <Image
                 className="cover-bg__img"
                 src="/images/lead-climbing.jpg"
+                width="335"
+                height="335"
                 alt="lead-climbing"
               />
               <div className="cta__inner">
@@ -183,9 +188,11 @@ const ClimbingSection = ({ t }) => {
           </Col>
           <Col className="cta__box" xs={12} sm={6} md={3}>
             <a href="" className="cta cover-bg bg--black colour--white">
-              <img
+              <Image
                 className="cover-bg__img"
                 src="/images/moonboard.jpg"
+                width="335"
+                height="335"
                 alt="moonboard"
               />
               <div className="cta__inner">
