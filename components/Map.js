@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import { StaticMap, Marker, Popup } from "react-map-gl";
 import styled from "styled-components";
 
 const MapStyled = styled.section`
@@ -16,7 +16,7 @@ const MapStyled = styled.section`
     width: 4rem;
     height: 4rem;
     color: #fff;
-    background: transparent url("https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png")
+    background: transparent url("/images/custom_marker.png")
       no-repeat center;
     background-size: contain;
     cursor: pointer;
@@ -63,7 +63,8 @@ const CustomPopup = ({ index, marker, closePopup }) => {
 
 const mapboxApiKey =
   "pk.eyJ1IjoibmhpZGV2IiwiYSI6ImNrbzc3MTNlejBtNzcydnBkaDR3eDI2aW8ifQ.axNab4PgM_tBy7hngQoCIg";
-class Map extends PureComponent {
+
+  class Map extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -76,15 +77,15 @@ class Map extends PureComponent {
       tempMarker: {
         name: "Saigon Climbing Center",
         address: "168/42 Nguyen Gia Tri Street, Ward 25",
-        longitude: 106.71799112664314,
         latitude: 10.806140602634395,
+        longitude: 106.71799112664314,
       },
       markers: [
         {
           name: "Saigon Climbing Center",
           address: "168/42 Nguyen Gia Tri Street, Ward 25",
-          longitude: 106.71799112664314,
           latitude: 10.806140602634395,
+          longitude: 106.71799112664314,
         },
       ],
     };
@@ -107,7 +108,7 @@ class Map extends PureComponent {
     const { className } = this.props;
     return (
       <MapStyled className={className}>
-        <ReactMapGL
+        <StaticMap
           mapboxApiAccessToken={mapboxApiKey}
           mapStyle="mapbox://styles/mapbox/light-v10"
           {...viewport}
@@ -140,7 +141,8 @@ class Map extends PureComponent {
               closePopup={this.closePopup}
             />
           )}
-        </ReactMapGL>
+        </StaticMap>
+        <div id="static" />
       </MapStyled>
     );
   }
