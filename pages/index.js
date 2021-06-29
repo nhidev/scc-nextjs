@@ -38,7 +38,7 @@ const Homepage = () => {
         bgImage={"/images/poster.jpg"}
       />
       <FacilitiesSection />
-      <OpeningTimes />
+      {/* <OpeningTimes /> */}
 
     </main>
   );
